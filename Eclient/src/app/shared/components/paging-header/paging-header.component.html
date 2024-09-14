@@ -1,0 +1,12 @@
+<div class="mt-2">
+    <span *ngIf="totalCount && totalCount > 0" >Showing <strong>
+    {{(pageNumber-1)*pageSize+1}} - 
+    {{pageNumber*pageSize
+    > this.totalCount
+    ? this.totalCount
+    : pageNumber*pageSize
+    }}
+    </strong> of <strong>{{this.totalCount}}</strong> Products</span>
+
+    <span *ngIf="totalCount === 0" >There are <strong>0</strong> products available for this filter</span>
+  </div>

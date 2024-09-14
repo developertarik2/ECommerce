@@ -1,0 +1,74 @@
+<ng-container *ngIf="items.length > 0">
+    <div class="table-responsive">
+        <table class="table">
+            <thead  [class.thea-light]="isCart || isOrder" class="border-0 py-2">
+                <tr>
+                    <th  scope="col" class="border-0" [class.bg-secondary]="isCart">
+                        <div class="p-2 px-3 text-upercase">
+                            Product
+                        </div>
+                    </th> 
+                    <th scope="col" class="border-0" [class.bg-secondary]="isCart">
+                        <div class="p-2 px-3 text-upercase">
+                            Price
+                        </div>
+                    </th>
+                    <th  scope="col" class="border-0" [class.bg-secondary]="isCart">
+                        <div class="p-2 px-3 text-upercase">
+                            Quantity
+                        </div>
+                    </th>
+                    <th  scope="col" class="border-0" [class.bg-secondary]="isCart">
+                        <div class="p-2 px-3 text-upercase">
+                            Total
+                        </div>
+                    </th>
+                    <th *ngIf="isCart" class="borer-0 bg-secondary" scope="col">
+                        <div class="p-2 px-3 text-upercase text-center">
+                            Remove
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items" class="border-0 ">
+                    <th scope="row">
+                        <div class="p-0">
+                            <img style="max-height: 60px;width: 70px;" src="{{item.pictureUrl}}" alt="{{item.productName}}" class="img-fluid">
+                         <div class="ml-3 d-inline-block align-middle">
+                             <h5 class="mb-0">
+                                 <a routerLink="/shop/{{item.id || item.id}}" class="text-info nounderline ">{{item.productName}}</a>
+                             </h5>
+                             <span *ngIf="item.category" class="text-muted font-weight-normal font-italic d-block">
+                                 Type:  {{item.category}}
+                             </span>
+                         </div>
+                        </div>
+    
+                    </th>
+                    <td class="align-middle">
+                        <strong>{{item.price | currency}}</strong>
+                    </td>
+                    <td class="align-middle">
+                        <div class="d-flex align-items-center" [class.justify-content-center]="!isCart">
+                            <i *ngIf="isCart" (click)="decrementQuantity(item)"  class="fa fa-minus-circle text-warning mr-2" style="cursor: pointer; font-size: 2em;"></i>
+                            <span class="font-weight-bold" style="font-size: 1.5em;">{{item.quantity}}</span>
+                             <i *ngIf="isCart" (click)="incrementQuantity(item)" class="fa fa-plus-circle text-warning mx-2" style="cursor: pointer; font-size: 2em;"></i>
+                        </div>
+    
+                    </td>
+                    <td class="align-middle">
+                     <strong>{{item.price * item.quantity | currency }}</strong>
+                    </td>
+                    <td *ngIf="isCart" class="align-middle text-center">
+                        <a class="text-danger"> 
+                        <i (click)="removeCartItem(item)" class="fa fa-trash" style="font-size: 2em ;cursor: pointer;"></i>
+                        </a>
+                    </td>
+    
+                </tr>
+            </tbody>
+    
+        </table>
+    </div>
+</ng-container>

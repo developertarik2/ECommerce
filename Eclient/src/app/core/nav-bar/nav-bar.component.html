@@ -1,0 +1,237 @@
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-primary text-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" [collapse]=isCollapsed id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      <!---<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <ul class="nav navbar-nav navbar-right">
+               
+                       <li class="dropdown" dropdown>
+         <a href="#" dropdownToggle class="dropdown-toggle">Dropdown <span class="caret"></span></a>
+          <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+            </li>
+          </ul>
+        </li>
+              </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>--
+      </ul>
+      <span class="d-flex align-items-center">
+        <a routerLink="/basket" class="position-relative">
+            <i class="fa fa-shopping-cart fa-2x mr-5 text-dark"></i>
+            <div class="cart-no"></div>
+        </a>
+        <ng-container class="form-inline" >
+          <a routerLink="/account/login" class="btn btn-outline-secondary mr-2" >Login</a>
+          <a routerLink="/account/register" class="btn btn-outline-secondary mr-3" >Sign up</a>
+        </ng-container>
+       <!--<ng-container >
+         <div class="dropdown ml-3 mr-5" dropdown>
+           <a class="dropdown-toggle" style="cursor: pointer;" dropdownToggle>
+          <strong>Welcome</strong>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right" style="cursor: pointer;" *dropdownMenu>
+            <a routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
+              <i class="fa fa-shopping-cart mr-3"></i> View Basket
+            </a>
+            <a routerLink="/orders" class="dropdown-item d-flex align-items-center py-2">
+              <i class="fa fa-history mr-3"></i> View Orders
+            </a>
+            <div class="dropdown-divider"></div>
+            <a (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
+              <i class="fa fa-sign-out mr-3"></i> Logout
+            </a>
+          </div>
+         </div>
+        
+       </ng-container>--
+    </span>
+    <!--<form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>--
+    </div>
+  </nav>-->
+
+  <nav class="navbar navbar-expand-xl navbar-light bg-light text-white">
+	<a routerLink="/" class="navbar-brand"><i class="fa fa-cube"></i>E-<b>Commerce</b></a>
+	<button type="button" class="navbar-toggler" 
+    data-toggle="collapse" (click)="isCollapsed = !isCollapsed"
+    data-target="#navbarCollapse">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" [collapse]=isCollapsed class="collapse navbar-collapse justify-content-start">
+		<div class="navbar-nav">
+			<a  [routerLink]="['/']" class="nav-item nav-link"  routerLinkActive="active" 
+      [routerLinkActiveOptions]="{exact:true}">HOME</a>
+			<a  routerLink="/shop" class="nav-item nav-link"   routerLinkActive="active">SHOP</a>
+		<!--div class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item">Web Design</a>
+					<a href="#" class="dropdown-item">Web Development</a>
+					<a href="#" class="dropdown-item">Graphic Design</a>
+					<a href="#" class="dropdown-item">Digital Marketing</a>
+				</div>
+			</div>
+			<a href="#" class="nav-item nav-link">Blog</a>-->
+			<a routerLink="/test-error"   class="nav-item nav-link text-uppercase" routerLinkActive="active">Errors</a>
+		</div>
+		<!--<form class="navbar-form form-inline">
+			<div class="input-group search-box">								
+				<input type="text" id="search" class="form-control" placeholder="Search by Name">
+				<!--<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>--
+			</div>
+		</form>-->
+		<div class="navbar-nav ml-auto">
+			<!--<a href="#" class="nav-item nav-link notifications"><i class="fa fa-bell-o"></i><span 
+                class="badge">1</span></a>
+			<a href="#" class="nav-item nav-link messages"><i class="fa fa-envelope-o"></i><span 
+                class="badge">10</span></a>-->
+
+            <a routerLink="/cart" class="position-relative mt-2">
+                <i class="fa fa-shopping-cart fa-2x mr-5 text-dark"></i>
+                <div *ngIf="(cart$ | async) as cart" class="cart-no">{{cart.items.length}}</div></a>
+
+                <ng-container *ngIf="(currentUser$ | async) === null" class="" >
+                    <div class="nav-item  mb-2">
+                    <a routerLink="/account/login" class="btn btn-info sign-up-btn btn-outline mr-2" >Login</a>
+                   
+                </div>
+                <div class="nav-item">
+                    <a routerLink="/account/register" class="btn btn-outline btn-primary sign-up-btn mr-2" >Sign up</a>
+                    </div>
+                  </ng-container>
+                  <ng-container *ngIf="currentUser$ | async">
+                    <div class="dropdown ml-1 mr-4 mt-1" dropdown>
+
+                   <a class=" text-warning dropdown-toggle btn btn-primary" style="cursor: pointer;" dropdownToggle>Welcome {{(currentUser$|async).displayName}}</a>
+
+                   <div class="dropdown-menu dropdown-menu-right" style="cursor: pointer;" *dropdownMenu>
+                    <a routerLink="/cart" class="dropdown-item d-flex align-items-center py-2">
+                      <i class="fa fa-shopping-cart mr-3"></i> View Basket
+                    </a>
+                    <a routerLink="/orders" class="dropdown-item d-flex align-items-center py-2">
+                      <i class="fa fa-history mr-3"></i> View Orders
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
+                      <i class="fa fa-sign-out mr-3"></i> Logout
+                    </a>
+                  </div>
+                   </div>
+                  </ng-container>
+                 
+			<!--<div class="nav-item dropdown">
+				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="/assets/images/2.jpg" class="avatar" alt="Avatar"> Paula Wilson <b class="caret"></b></a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
+					<a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a>
+					<a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a>
+					<div class="dropdown-divider"></div>
+					<a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
+				</div>
+			</div>-->
+		</div>
+        <!--<div class="navbar-nav ml-auto action-buttons">
+             <a routerLink="/basket" class="position-relative">
+                <i class="fa fa-shopping-cart fa-2x mr-5 text-dark"></i>
+                <div class="cart-no"></div></a>
+
+            <div class="nav-item dropdown">
+                <a href="#"  class="btn btn-primary  sign-up-btn  m-2">Login</a>
+               
+                </div>
+                <div class="nav-item dropdown">
+                    
+                    <a href="#" data-toggle="dropdown" class="btn btn-primary  sign-up-btn">Sign up</a>
+                    </div>
+                </div>-->
+	</div>
+</nav>
+
+ <!---<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display --
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling --
+      <div class="collapse navbar-collapse" [collapse]=isCollapsed>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown" dropdown>
+   <a href="#" dropdownToggle class="dropdown-toggle">Dropdown <span class="caret"></span></a>
+    <ul *dropdownMenu class="dropdown-menu" role="menu">
+      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+      </li>
+    </ul>
+  </li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+                 <li class="dropdown" dropdown>
+   <a href="#" dropdownToggle class="dropdown-toggle">Dropdown <span class="caret"></span></a>
+    <ul *dropdownMenu class="dropdown-menu" role="menu">
+      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+      </li>
+    </ul>
+  </li>
+        </ul>
+      </div><!-- /.navbar-collapse --
+    </div><!-- /.container-fluid --
+  </nav> -->
+
+  
+

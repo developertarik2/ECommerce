@@ -1,0 +1,164 @@
+<div class="container">
+  <!--<div class="row">
+   <div class="col-md-2">
+   
+   </div>
+   <div class="col-md-10">
+   <div class="row">
+     <div class="col-md-4" *ngFor="let item of products">
+       <div class="m-4">
+      <div class="text-center">
+        <h6>{{item.name}} </h6>
+      </div>
+      <div class="text-center">
+        <img src={{item.pictureUrl}} style="width: 250px;height:200px;"/>
+      </div>
+    </div>
+     </div>
+
+   </div>
+  </div>
+
+  </div>-->
+
+</div>
+<main role="main">
+
+  <!--<section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Products Display</h1>
+      <p class="lead text-muted">All updated products.</p>
+      <!--<p>
+        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+      </p>--
+    </div>
+  </section>-->
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+<div class="row">
+<div class="col-md-3" *ngIf="categories && brands">
+  <div>
+    <h5 class="text-warning text-center">Sort</h5>
+    <select class="custom-select mb-3"  #mySelect (change)="OnSortSelected(mySelect.value)">
+    <option *ngFor="let sort of sortOptions"
+    [selected]="shopParams.sort=== sort.value"
+    [value]="sort.value"
+    >{{sort.name}}
+  </option>
+    
+    </select>
+  </div>
+  <div class="text-center mt-3 mb-3"><h4 class="text-info">Brands</h4>
+    <a class="btn btn-primary" (click)="isCollapsed = !isCollapsed" *ngIf="showHide" >
+  Show Brands
+</a>
+  </div>
+  
+  <div  *ngIf="isCollapsed" >
+    <ul class="list-group"  >
+      <li style="cursor: pointer;" class="list-group-item" *ngFor="let brand of brands"
+      
+      [class.active]="brand.id === this.shopParams.brandId"
+      [value]="brand.id"
+      (click)="OnBrandIdSelected(brand.id)"
+      >{{brand.name}}</li>
+     
+    </ul>
+  </div>
+
+  <div class="text-center mt-3 mb-3"><h4 class="text-info">Category</h4>
+    <a class="btn btn-primary " (click)="isCollapseCat = !isCollapseCat" *ngIf="showHide" >
+  Category
+</a>
+  </div>
+  
+  <div  *ngIf="isCollapseCat" >
+    <ul class="list-group"  >
+      <li style="cursor: pointer;" class="list-group-item" *ngFor="let cat of categories"
+      [class.active]="cat.id === this.shopParams.typeId"
+      [value]="cat.id"
+      (click)="OnTypeIdSelected(cat.id)"
+      >{{cat.name}}</li>
+     
+    </ul>
+  </div>
+  
+  
+</div>
+<div class="col-md-9">
+  <div class="row">
+    <div class="col-md-4">
+     <app-paging-header 
+     [totalCount]="this.totalCount"
+     [pageNumber]="this.shopParams.pageNumber"
+     [pageSize]="this.shopParams.pageSize"
+     >
+
+     </app-paging-header>
+      </div>
+      <div class="col-md-8">
+      <div class="form-inline float-right" *ngIf="products">
+        <input (keyup.enter)="onSearch()"  class="form-control mr-2" 
+       #search style="width: 300px;" type="text" 
+        placeholder="Search">
+    <button (click)="onSearch()"  class="btn btn-outline-primary my-2">Search</button>
+    <button (click)='onReset()'  class="btn btn-outline-primary ml-2 my-2">Reset</button>
+    </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let item of products">
+     <app-product-item [product]="item"></app-product-item>
+    </div>
+    <div *ngIf="totalCount > 0" class="col-md-12 mt-3 d-flex justify-content-center">
+     <app-pager 
+     [totalCount]="this.totalCount"
+     (pageChanged)="OnPageChange($event)"
+     [pageNumber]="shopParams.pageNumber"
+     [pageSize]="this.shopParams.pageSize"
+     >
+
+     </app-pager>
+    </div>
+    
+    
+   
+
+    
+    
+    
+
+    
+   
+    <!--<div class="col-md-4">
+      <div class="card mb-4 box-shadow">
+        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22505%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20505%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17a8a07a2e2%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17a8a07a2e2%22%3E%3Crect%20width%3D%22505%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22168.25%22%20y%3D%22123.6%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+        <div class="card-body">
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            </div>
+            <small class="text-muted">9 mins</small>
+          </div>
+        </div>
+      </div>
+    </div>-->
+  </div>
+</div>
+</div>
+     
+    </div>
+  </div>
+
+</main>
+<!--<ul>
+    <li *ngFor="let item of products">
+  {{item.name}} 
+  <img src={{item.pictureUrl}} style="width: 450px;height:400px;"/>
+    </li>
+  </ul>-->

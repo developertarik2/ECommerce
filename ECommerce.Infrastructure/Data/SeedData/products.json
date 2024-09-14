@@ -1,0 +1,146 @@
+[
+  {
+    "Name": "Galaxy S21 Ultra 5G",
+    "Description": "Well, the Galaxy S21 Ultra makes up for everything. It has a large 1440p screen with native 120Hz support, adaptive at that. It also brings two dedicated telephoto snappers - one for 3x and another one for 10x optical zoom. Its ultrawide camera does feature autofocus, which works for macro shots. The new Ultra also offers ultrawide-band support, and surprise, surprise, S-Pen support as well. This has to be the first non-Note Galaxy phone to offer that - one for the history books.",
+    "Price": 1000,
+    "PictureUrl": "images/products/Samsung-S21-Ultra.jpg",
+    "CategoryId": 2,
+    "BrandId": 2
+  },
+  {
+    "Name": "Samsung Galaxy Note20 Ultra 5G",
+    "Description": "The Galaxy Note20 Ultra features what could possibly be the pinnacle of display technology available to the public right now. It has the resolution, the refresh rate, the brightness, the color reproduction, and, being a Note, the nuanced pressure detection for the S Pen.",
+    "Price": 950,
+    "PictureUrl": "images/products/Note-20-Ultra.jpg",
+    "CategoryId": 2,
+    "BrandId": 2
+  },
+  {
+    "Name": "Sony Xperia 1 III",
+    "Description": "Speed is at the very heart of the Xperia 1 III experience – from the immersive 4K HDR OLED display with its rapid 120Hz Refresh rate1 to the triple lens camera which features fast AF even when shooting extended telephoto. ",
+    "Price": 1180,
+    "PictureUrl": "images/products/Sony-Xperia-iii.jpg",
+    "CategoryId": 2,
+    "BrandId": 2
+  },
+  {
+    "Name": "Xiaomi Mi 11 Ultra",
+    "Description": "There's a lot more than 1.1 inches of OLED on the front. The 6.81-inch Super AMOLED is all kinds of great - high resolution, high refresh rate, high brightness, HDR, a billion colors, you name it. Meanwhile, the Snapdragon 888 underneath is second to none as chipsets go this year and with 256GB of base storage.",
+    "Price": 1300,
+    "PictureUrl": "images/products/mi11ultra.jpg",
+    "CategoryId": 2,
+    "BrandId": 3
+  },
+  {
+    "Name": "Sony X85J 50 Inch TV: 4K Ultra HD LED",
+    "Description": "4K HDR PROCESSOR X1 – Powerful TV processing that delivers a picture that is smooth and clear, full of rich colors and detailed contrast.",
+    "Price": 1550,
+    "PictureUrl": "images/products/Sony-TV-1.jpg",
+    "CategoryId": 1,
+    "BrandId": 1
+  },
+  {
+    "Name": "Sony A90J 83 Inch TV: BRAVIA XR OLED",
+    "Description": "COGNITIVE PROCESSOR XR – Revolutionary TV processing technology that understands how humans see and hear to deliver intense contrast with pure blacks, high peak brightness, and natural colors.",
+    "Price": 1800,
+    "PictureUrl": "images/products/Sony-TV-2.jpg",
+    "CategoryId": 1,
+    "BrandId": 1
+  },
+  {
+    "Name": "SAMSUNG 82-inch Class Crystal UHD HDR Smart TV",
+    "Description": "CRYSTAL PROCESSOR 4K: This ultra-fast processor transforms everything you watch into stunning 4K.SMART TV POWERED BY TIZEN : Go beyond Smart TV with next-gen apps, super easy control, and a host of enhancements that elevate the TV watching experience.",
+    "Price": 1600,
+    "PictureUrl": "images/products/Samsung-TV-1.jpg",
+    "CategoryId": 1,
+    "BrandId": 2
+  },
+  {
+    "Name": "SAMSUNG 65-Inch - 4K Quantum HDR Smart TV ",
+    "Description": "ART MODE: The Frame transforms into a beautiful work of art when you’re not watching TV. Activate the built-in motion sensor so whenever you walk into the room, your TV displays one of your favorite selections.",
+    "Price": 1100,
+    "PictureUrl": "images/products/Samsung-TV-2.jpg",
+    "CategoryId": 1,
+    "BrandId": 2
+  },
+  {
+    "Name": "LG 1 Ton DUAL Inverter Wi-Fi Ionizer Air Conditioner",
+    "Description": "LG's Dual Inverter Compressor™ solves improper, ineffective and noisy problems, resulting in an air conditioner that cools faster, lasts longer, and runs quieter.",
+    "Price": 1200,
+    "PictureUrl": "images/products/LG-AC-1.jpg",
+    "CategoryId": 4,
+    "BrandId": 4
+  },
+  {
+    "Name": "LG Dual Inverter 1.5 Ton AC",
+    "Description": "LG's DUAL Inverter Compressor with Varied Speed Dual Rotary Motor has a wider rotational frequency which saves more energy along with higher speed cooling range than conventional compressors.",
+    "Price": 800,
+    "PictureUrl": "images/products/LG-AC-2.jpg",
+    "CategoryId": 4,
+    "BrandId": 4
+  },
+  {
+    "Name": "Honda CBR 150R (2021)",
+    "Description": "The main attraction of this Race Machine is its new and refreshed look. Honda Sources its design from its elder sibling Honda CBR 250RR.",
+    "Price": 3000,
+    "PictureUrl": "images/products/CBR.jpg",
+    "CategoryId": 3,
+    "BrandId": 5
+  },
+  {
+    "Name": "Honda CB125R",
+    "Description": "The CB125R packs concentrated performance into a stylish silhouette, offering an exciting  riding experience for new riders.",
+    "Price": 2000,
+    "PictureUrl": "images/products/CB125R.jpg",
+    "CategoryId": 3,
+    "BrandId": 5
+  },
+  {
+    "Name": "Honda CB650R Neo Sports Cafe",
+    "Description": "The CB650R features rich digital LCD instruments with new, easy-to-read design; included in the display are Gear Position and Shift Up indicators.",
+    "Price": 5000,
+    "PictureUrl": "images/products/CB650R.jpg",
+    "CategoryId": 3,
+    "BrandId": 5
+  },
+  {
+    "Name": "KTM 200 Duke",
+    "Description": "The KTM 200 Duke is powered by 199.5cc BS6 engine which develops a power of 25.4 bhp and a torque of 19.5 Nm. With both front and rear disc brakes, KTM 200 Duke comes up with anti-locking braking system.",
+    "Price": 2750,
+    "PictureUrl": "images/products/KTM200duke.jpg",
+    "CategoryId": 3,
+    "BrandId": 6
+  },
+  {
+    "Name": "KTM RC 125",
+    "Description": "The KTM RC 125 is powered by 125cc BS6 engine which develops a power of 14.5 bhp and a torque of 12 Nm. With both front and rear disc brakes, KTM RC 125 comes up with anti-locking braking system.",
+    "Price": 2500,
+    "PictureUrl": "images/products/ktm-rc-125.jpg",
+    "CategoryId": 3,
+    "BrandId": 6
+  },
+  {
+    "Name": "KTM RC 390",
+    "Description": "The KTM RC 390 is powered by 373cc BS6 engine which develops a power of 42.9 bhp and a torque of 35 Nm. With both front and rear disc brakes, KTM RC 390 comes up with anti-locking braking system.",
+    "Price": 5000,
+    "PictureUrl": "images/products/ktm-rc-390.jpg",
+    "CategoryId": 3,
+    "BrandId": 6
+  },
+  {
+    "Name": "LG B1 65 inch Class 4K Smart OLED TV",
+    "Description": "If you're looking for a TV like no other, look no further. LG OLED TV is a work of art, a big-screen cinema, a portal to gaming worlds, and a front row seat to the biggest sporting events",
+    "Price": 2100,
+    "PictureUrl": "images/products/LG-TV-1.jpg",
+    "CategoryId": 1,
+    "BrandId": 4
+  },
+  {
+    "Name": "Xiaomi MI 4A Horizon Edition 43 Full HD Smart TV",
+    "Description": "The Xiaomi MI 4A Horizon Edition 43 Smart TV is an impressive TV on its own as it provides users with all the latest technologies at one place.",
+    "Price": 450,
+    "PictureUrl": "images/products/MI-TV-1.jpg",
+    "CategoryId": 1,
+    "BrandId": 3
+  }
+]

@@ -1,0 +1,50 @@
+<div class="container mt-5">
+    <div *ngIf="(cart$|async) === null">
+ <p>There are no items to display in the cart</p>
+    </div>
+
+    <div *ngIf="(cart$|async) as cart">
+        <!--<ul *ngFor="let item of cart.items" >
+         <li>{{item.productName}}</li>
+        </ul>-->
+<div class="card shadow zoomhov">
+        <div class="pb-5">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-12 py-5 mb-1">
+
+       <app-cart-summary
+       (decrement)="decrementQuantity($event)"
+       (increment)="incrementQuantity($event)"
+       (remove)="removeCartItem($event)"
+       [isCart]="true"
+       [items]="(cart$ | async).items"
+       >
+
+       </app-cart-summary>
+     </div>
+     </div>
+
+     <div class="row">
+        <div class="col-md-6 offset-6">
+           <app-order-totals
+           *ngIf="(cartTotals$ | async)"
+        [shippingPrice]="(cartTotals$ | async).shipping"
+        [subtotal]="(cartTotals$ | async).subtotal"
+        [total]="(cartTotals$ | async).total"
+        >
+
+           </app-order-totals>
+
+           <a class="btn btn-outline-primary py-2  btn-block" routerLink="/checkout">
+         Proceed to checkout
+         </a>
+        </div>
+     </div>
+
+     </div>
+     </div>
+</div>
+
+           </div>
+</div>
